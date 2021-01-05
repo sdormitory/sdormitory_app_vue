@@ -8,7 +8,7 @@
 		<div class="info-header-main">
 			<div class="title">
 				<div class="personMsg">
-					<img class="pic_t" src="../../../static/icon1.png"/>
+					<img class="pic_t" :src="photo"/>
 					<div class="personInfo">
 						<span class="info-username">{{ icon }} {{ username }}</span>
 						<span>手机号：{{ phone }}</span>
@@ -33,7 +33,8 @@
 				indexList:[],
 				username:'',
 				phone : '',
-				icon:''
+				icon:'',
+				photo: '/sdormitoryapp/img/icon1.5a6b80ab.png',
 			}
 		},
 		components: {
@@ -50,6 +51,7 @@
 				}else if(tokenPrefix==='appstudent'){
 					this.username = res.data.data.studentName
 					this.phone = res.data.data.phone
+					this.photo = this.$location.getPhoto+"?id="+res.data.data.id+"&width=200&height=200"
 				}else{
 					this.username = res.data.data.parentName
 					this.phone = res.data.data.parentPhone
@@ -74,7 +76,7 @@
 			// 跳转修改密码
 			goUpdatePwd() {
 				this.$router.push("/Updateps");
-			}
+			},
 		}
 	}
 </script>

@@ -7,7 +7,8 @@ const location ={
 	getAccountById : sdormitoryPath + "/app/Account/getAccountById",
 	updatePassord : sdormitoryPath + "/app/Account/updatePassord",
 	getLeaveByAccId : sdormitoryPath + "/app/Leave/getLeaveByAccId",
-	getLeaveById : sdormitoryPath + "/app/Leave/getLeaveById"
+	getLeaveById : sdormitoryPath + "/app/Leave/getLeaveById",
+	getPhoto : sdormitoryPath + "/app/Account/getPhoto"
 }
 
 export default location
